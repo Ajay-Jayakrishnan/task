@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <table class="table table-responsive">
+        <thead>
+
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Dob</th>
+                <th>Role</th>
+                <th>Phone</th>
+                <th>Gender</th>
+
+            </tr>
+
+
+        </thead>
+        <tbody>
+            <tr *ngIf="data">
+                <td>{{data.name1}}</td>
+                <td>{{data.address}}</td>
+                <td>{{data.dob}}</td>
+                <td>{{data.role}}</td>
+                <td>{{data.phone}}</td>
+                <td>{{data.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

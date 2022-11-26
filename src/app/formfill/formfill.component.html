@@ -1,0 +1,63 @@
+<div class="row ">
+    <div class="col"></div>
+    <div class="p-4 col-sm-4">
+        <form action="" [formGroup]="fillForm" (ngSubmit)="filled()">
+            <div>
+                <label for="name">Name</label>
+                <input id="name" type="text" class="form-control" formControlName="name1">
+                <div *ngIf="this.fillForm.get('name1')?.touched&&this.fillForm.get('name1')?.errors"
+                    style="color: red;">Field Reuired</div>
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <textarea id="address" class="form-control" formControlName="address"></textarea>
+                <div *ngIf="this.fillForm.get('address')?.touched&&this.fillForm.get('address')?.errors"
+                    style="color: red;">Field Reuired</div>
+
+            </div>
+            <div>
+                <label for="dob">Date of birth</label>
+                <input id="dob" type="date" class="form-control" formControlName="dob">
+                <div *ngIf="this.fillForm.get('dob')?.touched&&this.fillForm.get('dob')?.errors"
+                    style="color: red;">Field Reuired</div>
+
+            </div>
+            <div>
+                <label for="phone">Phone</label>
+                <input id="phone" type="text" class="form-control" formControlName="phone">
+                <div *ngIf="this.fillForm.get('phone')?.touched&&this.fillForm.get('phone')?.errors"style="color: red;">Field Reuired</div>
+            </div>
+            <div>
+                <label for="role">Role</label>
+                <select name="role" id="role" class="form-select" formControlName="role">
+                    <option value="admin">Admin</option>
+                    <option value="manager">Manager</option>
+                    <option value="hr">HR</option>
+                    <option value="developer">Developer</option>
+                </select>
+                <div *ngIf="this.fillForm.get('role')?.touched&&this.fillForm.get('role')?.errors"style="color: red;">Field Reuired</div>
+
+            </div>
+            <div>
+                <label>Gender</label><br>
+                <label for="male" class="ms-2">Male</label>
+                <input type="radio" name="gender" id="male" class="ms-1 form-check-input" formControlName="gender"
+                    value="male">
+                <div *ngIf="this.fillForm.get('gender')?.touched&&this.fillForm.get('gender')?.errors"
+                    style="color: red;">Field Reuired</div>
+
+                <label for="female" class="ms-2">Female</label>
+                <input type="radio" name="gender" id="female" class="ms-1 form-check-input" formControlName="gender"
+                    value="female">
+                <div *ngIf="this.fillForm.get('gender')?.touched&&this.fillForm.get('gender')?.errors"
+                    style="color: red;">Field Reuired</div>
+
+            </div>
+           
+
+           <div class="d-flex"> <button class="btn mt-2 btn-primary mx-auto" type="submit">Submit</button></div>
+        </form>
+        <button ><a href="show">View Entries</a></button>
+    </div>
+    <div class="col"></div>
+</div>
